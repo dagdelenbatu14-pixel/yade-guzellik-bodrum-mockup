@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Yade Güzellik · Bodrum — Cilt Bakımı, Lazer, Tırnak</title>
+<meta name="description" content="Bodrum'da Yaren'in titiz dokunuşuyla cilt bakımı, lazer epilasyon, yosun peeling, G5 ve tırnak işlemleri. Randevu için 0544 232 40 48."/>
+<meta name="theme-color" content="#e8efe2"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Yade Güzellik",
+  "image": "https://yadeguzellik.example/og.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Adliye Cd. Adalet İş Merkezi No:17/C8",
+    "addressLocality": "Bodrum",
+    "addressRegion": "Muğla",
+    "postalCode": "48400",
+    "addressCountry": "TR"
+  },
+  "priceRange": "$$",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "12"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "10:00",
+    "closes": "18:30"
+  }],
+  "url": "https://yadeguzellik.example",
+  "telephone": "+905442324048",
+  "sameAs": ["https://www.instagram.com/yadeeguzellik/"]
+}
+</script>
+<style>
+:root {
+  --rose: #6f8f6c;          /* sage green — primary brand */
+  --rose-deep: #4f6f4d;     /* forest hover */
+  --plum: #2c4730;          /* deep forest — headings */
+  --plum-deep: #1a2b1d;     /* darkest — footer */
+  --gold: #b8924d;          /* keep — gold accents */
+  --gold-soft: #cdb37e;     /* warm cream-gold */
+  --blush: #e8efe2;         /* mist — soft green tint */
+  --paper: #f5f8f1;         /* paper — warm off-white */
+  --ivory: #fafcf6;         /* ivory — lightest */
+  --ink: #1f2a22;           /* green-tinted dark text */
+  --ink-soft: rgba(31,42,34,.78);
+  --line: rgba(31,42,34,.12);
+  --pad: clamp(20px, 5vw, 64px);
+  --max: 1260px;
+  --f-display: "Cormorant Garamond", "Playfair Display", serif;
+  --f-body: "Inter", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--f-body); color: var(--ink); background: var(--paper); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+img { display: block; max-width: 100%; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+section { padding: clamp(80px, 14vw, 160px) 0; }
+
+/* nav */
+.nav { position: sticky; top: 0; z-index: 30; background: rgba(245,248,241,.93); backdrop-filter: blur(12px); padding: 18px 0; border-bottom: 1px solid var(--line); }
+.nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { font-family: var(--f-display); font-weight: 600; font-size: 1.7rem; color: var(--plum); text-decoration: none; line-height: 1; letter-spacing: .02em; display: flex; flex-direction: column; }
+.brand small { font-family: var(--f-body); font-weight: 400; font-size: .6rem; letter-spacing: .34em; text-transform: uppercase; color: var(--rose); margin-top: 6px; }
+.nav__links { display: flex; gap: 32px; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 500; }
+.nav__links a { text-decoration: none; color: var(--ink); opacity: .75; transition: opacity .2s ease, color .2s ease; }
+.nav__links a:hover { opacity: 1; color: var(--rose); }
+.nav__actions { display: flex; align-items: center; gap: 12px; }
+.nav__icon { width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; border: 1px solid var(--line); color: var(--plum); text-decoration: none; transition: background .2s ease, color .2s ease, border-color .2s ease; }
+.nav__icon:hover { background: var(--rose); color: #fff; border-color: var(--rose); }
+.nav__cta { font-size: .76rem; padding: 12px 26px; background: var(--rose); color: #fff; text-decoration: none; letter-spacing: .14em; text-transform: uppercase; font-weight: 500; border-radius: 999px; border: 1px solid var(--rose); transition: background .2s ease; }
+.nav__cta:hover { background: var(--rose-deep); border-color: var(--rose-deep); }
+@media (max-width: 860px) { .nav__links { display: none; } }
+
+/* hero */
+.hero { padding: clamp(80px, 14vw, 160px) 0 clamp(60px, 10vw, 120px); background:
+  radial-gradient(circle at 86% 14%, rgba(111,143,108,.22), transparent 55%),
+  radial-gradient(circle at 12% 84%, rgba(184,146,77,.12), transparent 55%),
+  linear-gradient(180deg, var(--paper) 0%, var(--blush) 100%);
+  position: relative; overflow: hidden; }
+.hero__ornament { position: absolute; top: 44px; left: 50%; transform: translateX(-50%); font-family: var(--f-display); color: var(--gold); opacity: .6; font-size: 1.3rem; letter-spacing: .3em; }
+.hero__ornament::before, .hero__ornament::after { content: '◆'; margin: 0 12px; font-size: .7em; }
+.hero__eyebrow { font-size: .72rem; letter-spacing: .36em; text-transform: uppercase; color: var(--rose); margin: 0 0 28px; text-align: center; font-weight: 500; }
+.hero h1 { font-family: var(--f-display); font-weight: 500; font-size: clamp(2.6rem, 8vw, 5.8rem); line-height: 1.04; margin: 0 auto 22px; max-width: 1000px; letter-spacing: -0.01em; text-align: center; color: var(--plum); }
+.hero h1 em { font-style: italic; color: var(--rose); font-weight: 400; }
+.hero__sub { font-size: 1.1rem; max-width: 580px; margin: 28px auto 44px; color: var(--ink-soft); text-align: center; }
+.cta-row { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; text-decoration: none; font-size: .8rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; transition: background .25s ease, color .25s ease, border-color .25s ease; border-radius: 999px; border: 1px solid transparent; }
+.btn-primary { background: var(--rose); color: #fff; border-color: var(--rose); }
+.btn-primary:hover { background: var(--rose-deep); border-color: var(--rose-deep); }
+.btn-ghost { color: var(--plum); border-color: var(--plum); background: transparent; }
+.btn-ghost:hover { background: var(--plum); color: var(--paper); }
+
+.hero__meta { margin-top: 72px; padding-top: 32px; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 880px; margin-left: auto; margin-right: auto; }
+.hero__meta div { text-align: center; }
+.hero__meta dt { font-size: .64rem; letter-spacing: .28em; text-transform: uppercase; color: rgba(31,42,34,.55); margin-bottom: 8px; }
+.hero__meta dd { margin: 0; font-family: var(--f-display); font-style: italic; font-weight: 500; font-size: 1.45rem; color: var(--rose); }
+@media (max-width: 640px) { .hero__meta { grid-template-columns: repeat(2,1fr); gap: 28px; } }
+
+/* generic section head */
+.section-head { max-width: 760px; margin: 0 auto 72px; text-align: center; }
+.section-head .ornament { color: var(--gold); font-size: 1rem; letter-spacing: .4em; margin-bottom: 18px; }
+.section-head .eyebrow { font-size: .72rem; letter-spacing: .36em; text-transform: uppercase; color: var(--rose); margin: 0 0 18px; font-weight: 500; }
+.section-head h2 { font-family: var(--f-display); font-weight: 500; font-size: clamp(2.1rem, 5vw, 3.6rem); line-height: 1.08; margin: 0 0 18px; color: var(--plum); }
+.section-head h2 em { font-style: italic; color: var(--rose); font-weight: 400; }
+.section-head p { color: var(--ink-soft); max-width: 540px; margin: 0 auto; font-size: 1.05rem; }
+
+/* services */
+.services { background: var(--paper); }
+.services__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.service { padding: 48px 32px; background: var(--ivory); border: 1px solid var(--line); position: relative; transition: transform .35s ease, border-color .35s ease, background .35s ease; }
+.service:hover { transform: translateY(-4px); border-color: var(--rose); background: #fff; }
+.service__num { font-family: var(--f-display); font-style: italic; font-weight: 500; font-size: 1.25rem; color: var(--gold); margin-bottom: 18px; letter-spacing: .14em; }
+.service h3 { font-family: var(--f-display); font-weight: 500; font-size: 1.7rem; margin: 0 0 12px; color: var(--plum); }
+.service p { color: var(--ink-soft); font-size: .98rem; margin: 0 0 22px; }
+.service ul { list-style: none; padding: 0; margin: 0; }
+.service li { padding: 9px 0; border-top: 1px solid rgba(31,42,34,.08); font-size: .9rem; color: var(--ink-soft); display: flex; justify-content: space-between; gap: 16px; }
+.service li:first-child { border-top: 0; padding-top: 0; }
+.service li span { color: var(--rose); font-family: var(--f-display); font-style: italic; }
+@media (max-width: 860px) { .services__grid { grid-template-columns: 1fr; } }
+
+/* signature */
+.signature { background: var(--blush); position: relative; overflow: hidden; }
+.signature::before { content: ''; position: absolute; top: -120px; right: -120px; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(111,143,108,.28), transparent 70%); }
+.signature__grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; position: relative; }
+.signature__text .eyebrow { font-size: .72rem; letter-spacing: .36em; text-transform: uppercase; color: var(--rose); margin: 0 0 18px; font-weight: 500; }
+.signature__text h2 { font-family: var(--f-display); font-weight: 500; font-size: clamp(2rem, 4.6vw, 3.2rem); line-height: 1.1; margin: 0 0 24px; color: var(--plum); }
+.signature__text h2 em { font-style: italic; color: var(--rose); font-weight: 400; }
+.signature__text p { color: var(--ink-soft); font-size: 1.05rem; margin: 0 0 18px; }
+.signature__quote { font-family: var(--f-display); font-style: italic; font-size: 1.4rem; line-height: 1.4; color: var(--plum); border-left: 2px solid var(--rose); padding: 8px 0 8px 24px; margin: 32px 0 0; }
+.signature__quote cite { display: block; margin-top: 14px; font-family: var(--f-body); font-style: normal; font-size: .74rem; letter-spacing: .26em; text-transform: uppercase; color: var(--rose); }
+.signature__visual { position: relative; aspect-ratio: 4/5; background: linear-gradient(135deg, var(--rose) 0%, var(--plum) 100%); border-radius: 4px; overflow: hidden; }
+.signature__visual::before { content: ''; position: absolute; inset: 0; background:
+  radial-gradient(circle at 30% 30%, rgba(255,255,255,.18), transparent 60%),
+  repeating-linear-gradient(45deg, transparent 0 12px, rgba(255,255,255,.04) 12px 13px);
+}
+.signature__visual::after { content: 'YADE'; position: absolute; bottom: 32px; left: 32px; font-family: var(--f-display); font-style: italic; color: rgba(255,255,255,.85); font-size: 4.5rem; line-height: 1; letter-spacing: -.02em; }
+@media (max-width: 860px) { .signature__grid { grid-template-columns: 1fr; gap: 40px; } }
+
+/* gallery / atmosphere */
+.atelier { background: var(--ivory); }
+.atelier__grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 240px 240px; gap: 12px; }
+.atelier__tile { background: linear-gradient(135deg, var(--blush), var(--rose-deep)); border-radius: 2px; position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 18px; color: #fff; font-family: var(--f-display); font-style: italic; font-size: 1.1rem; }
+.atelier__tile::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(255,255,255,.18), transparent 60%); }
+.atelier__tile:nth-child(1) { grid-row: span 2; background: linear-gradient(160deg, var(--plum) 0%, var(--rose) 100%); }
+.atelier__tile:nth-child(2) { background: linear-gradient(135deg, var(--gold-soft), var(--gold)); }
+.atelier__tile:nth-child(3) { background: linear-gradient(135deg, #b8cbb0, var(--rose)); }
+.atelier__tile:nth-child(4) { background: linear-gradient(135deg, #d4dec8, var(--gold-soft)); }
+.atelier__tile:nth-child(5) { background: linear-gradient(135deg, #d8e3d2, var(--rose-deep)); }
+.atelier__tile span { position: relative; z-index: 2; }
+@media (max-width: 860px) { .atelier__grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 180px); }
+  .atelier__tile:nth-child(1) { grid-row: span 1; grid-column: span 2; } }
+
+/* reviews */
+.reviews { background: var(--paper); }
+.reviews__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.review { padding: 36px 32px; background: var(--ivory); border: 1px solid var(--line); position: relative; }
+.review__stars { color: var(--gold); letter-spacing: .15em; font-size: .9rem; margin-bottom: 18px; }
+.review p { color: var(--ink-soft); font-size: .98rem; line-height: 1.7; margin: 0 0 24px; font-style: italic; }
+.review__author { font-family: var(--f-display); font-weight: 500; font-size: 1.15rem; color: var(--plum); }
+.review__date { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--rose); margin-top: 4px; }
+@media (max-width: 860px) { .reviews__grid { grid-template-columns: 1fr; } }
+
+/* contact */
+.contact { background: var(--plum); color: var(--paper); position: relative; overflow: hidden; }
+.contact::before { content: ''; position: absolute; top: -180px; left: -180px; width: 460px; height: 460px; border-radius: 50%; background: radial-gradient(circle, rgba(111,143,108,.28), transparent 70%); }
+.contact::after { content: ''; position: absolute; bottom: -120px; right: -120px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(184,146,77,.2), transparent 70%); }
+.contact .section-head .eyebrow { color: var(--gold-soft); }
+.contact .section-head h2 { color: #fff; }
+.contact .section-head h2 em { color: var(--gold-soft); }
+.contact .section-head p { color: rgba(250,252,246,.78); }
+.contact__grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.contact__col h3 { font-family: var(--f-display); font-weight: 500; font-size: 1.6rem; margin: 0 0 24px; color: #fff; }
+.contact__col h3 em { font-style: italic; color: var(--gold-soft); }
+.contact__row { display: flex; flex-direction: column; gap: 8px; padding: 18px 0; border-top: 1px solid rgba(232,239,226,.18); }
+.contact__row:first-of-type { border-top: 0; padding-top: 0; }
+.contact__label { font-size: .68rem; letter-spacing: .28em; text-transform: uppercase; color: var(--gold-soft); }
+.contact__value { font-family: var(--f-display); font-size: 1.2rem; color: #fff; font-style: italic; line-height: 1.45; }
+.contact__value a { text-decoration: none; color: inherit; border-bottom: 1px dashed rgba(232,239,226,.45); }
+.contact__value a:hover { color: var(--gold-soft); }
+.contact__map { aspect-ratio: 4/3; border-radius: 4px; overflow: hidden; border: 1px solid rgba(232,239,226,.18); position: relative; background: #1b1218; }
+.contact__map iframe { width: 100%; height: 100%; border: 0; }
+.contact__cta-row { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+.contact .btn-primary { background: var(--rose); border-color: var(--rose); }
+.contact .btn-primary:hover { background: var(--rose-deep); border-color: var(--rose-deep); }
+.contact .btn-ghost { color: var(--paper); border-color: rgba(232,239,226,.45); }
+.contact .btn-ghost:hover { background: var(--paper); color: var(--plum); }
+@media (max-width: 860px) { .contact__grid { grid-template-columns: 1fr; gap: 40px; } }
+
+/* footer */
+.foot { background: var(--plum-deep); color: rgba(232,239,226,.72); padding: 36px 0; font-size: .82rem; }
+.foot__inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+.foot a { color: var(--gold-soft); text-decoration: none; }
+.foot a:hover { color: var(--rose); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav__inner">
+    <a href="#" class="brand">Yade Güzellik<small>Bodrum</small></a>
+    <div class="nav__links">
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#yorumlar">Yorumlar</a>
+      <a href="#iletisim">İletişim</a>
+    </div>
+    <div class="nav__actions">
+      <a class="nav__icon" href="https://www.instagram.com/yadeeguzellik/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a class="nav__cta" href="tel:+905442324048">Randevu Al</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero__ornament">YADE</div>
+    <p class="hero__eyebrow">Bodrum · Güzellik Atölyesi</p>
+    <h1>Cildinize, tırnağınıza ve <em>kendinize</em> ayırdığınız o özel saat.</h1>
+    <p class="hero__sub">Cilt bakımından lazer epilasyona, yosun peelingden tırnak işlemlerine — Yaren'in titiz dokunuşuyla, her detayı size anlatarak.</p>
+    <div class="cta-row">
+      <a href="tel:+905442324048" class="btn btn-primary">Randevu için ara</a>
+      <a href="https://www.instagram.com/yadeeguzellik/" target="_blank" rel="noopener" class="btn btn-ghost">Instagram'da gör</a>
+    </div>
+    <dl class="hero__meta">
+      <div><dt>Google Puanı</dt><dd>5.0 / 12 yorum</dd></div>
+      <div><dt>Konum</dt><dd>Bodrum</dd></div>
+      <div><dt>Kapanış</dt><dd>18:30</dd></div>
+      <div><dt>Sahip</dt><dd>Kadın işletmesi</dd></div>
+    </dl>
+  </div>
+</header>
+
+<section id="hizmetler" class="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="ornament">◆ ◆ ◆</div>
+      <p class="eyebrow">Hizmetlerimiz</p>
+      <h2>Her seansta <em>özenle</em> seçilen ritüeller.</h2>
+      <p>Her uygulamayı size en ince ayrıntısına kadar anlatıyoruz. Ne uyguluyoruz, nasıl etki ediyor, sonrasında ne beklemeli — hep birlikte konuşuyoruz.</p>
+    </div>
+
+    <div class="services__grid">
+      <article class="service">
+        <div class="service__num">— 01</div>
+        <h3>Cilt Bakımı</h3>
+        <p>Cildin ihtiyacına göre kişiselleştirilmiş bakım protokolleri; temizleme, peeling, maske ve yatıştırma.</p>
+        <ul>
+          <li>Klasik cilt bakımı<span>60 dk</span></li>
+          <li>Yosun peeling<span>İmza ritüeli</span></li>
+          <li>Yatıştırıcı bakım<span>Hassas cilt</span></li>
+          <li>Anti-aging seans<span>Yenileyici</span></li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <div class="service__num">— 02</div>
+        <h3>Lazer Epilasyon</h3>
+        <p>Cildi yormayan, etkili teknolojiyle tüm vücut bölgeleri için güvenli lazer uygulaması.</p>
+        <ul>
+          <li>Bacak — tam<span>Seans</span></li>
+          <li>Koltuk altı + bikini<span>Kombine</span></li>
+          <li>Yüz bölgeleri<span>Hassas</span></li>
+          <li>Tam vücut paketi<span>Kampanya</span></li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <div class="service__num">— 03</div>
+        <h3>G5 & Vücut</h3>
+        <p>Selülit, sıkılaştırma ve bölgesel incelmeye yönelik G5 masaj ve vücut bakımları.</p>
+        <ul>
+          <li>G5 selülit masajı<span>30 dk</span></li>
+          <li>Sıkılaştırıcı bakım<span>Bölgesel</span></li>
+          <li>Detoks paketi<span>Seri seans</span></li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <div class="service__num">— 04</div>
+        <h3>Tırnak Sanatı</h3>
+        <p>Klasik manikürden kalıcı oje ve protez tırnağa — uzun ömürlü, temiz işçilik.</p>
+        <ul>
+          <li>Manikür &amp; Pedikür<span>Klasik</span></li>
+          <li>Kalıcı oje<span>3-4 hafta</span></li>
+          <li>Protez tırnak<span>Form &amp; Renk</span></li>
+          <li>Nail art<span>İsteğe özel</span></li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <div class="service__num">— 05</div>
+        <h3>Kaş &amp; Kirpik</h3>
+        <p>Doğal hatlara saygılı şekillendirme, boyama ve uzun süreli kalıcı uygulamalar.</p>
+        <ul>
+          <li>Kaş tasarımı<span>İpek ipi</span></li>
+          <li>Kaş &amp; kirpik boyama<span>Doğal ton</span></li>
+          <li>Kirpik lifting<span>6 hafta</span></li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <div class="service__num">— 06</div>
+        <h3>Özel Günler</h3>
+        <p>Gelin, nişan ve davet öncesi — cildinizi ve görünümünüzü o güne hazırlayan tam paket.</p>
+        <ul>
+          <li>Gelin bakım paketi<span>Çok seanslı</span></li>
+          <li>Davet hazırlığı<span>Aynı gün</span></li>
+          <li>Özel danışma<span>Ücretsiz</span></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="hakkimizda" class="signature">
+  <div class="wrap">
+    <div class="signature__grid">
+      <div class="signature__text">
+        <p class="eyebrow">Hakkımızda</p>
+        <h2>Bodrum'da, <em>kadın elinin</em> dokunduğu sakin bir köşe.</h2>
+        <p>Yade Güzellik, Bodrum'da Yaren'in kurduğu küçük ama özenle düşünülmüş bir güzellik atölyesi. Her misafire ayrılan zaman, her uygulamanın anlatıldığı detay, ve "buraya geldiğime değdi" dedirten bir samimiyet.</p>
+        <p>İşletme sahibi kadın. Müşterilerimizin çoğu da kadın — birbirimizi anlıyoruz, güvenle bırakıyoruz. Geliyoruz, dinleniyoruz, daha iyi hissederek çıkıyoruz.</p>
+        <blockquote class="signature__quote">
+          "Sahip olduğunuz her şey önemlidir; cildiniz, tırnağınız ve bize ayırdığınız zaman özellikle."
+          <cite>— Yaren</cite>
+        </blockquote>
+      </div>
+      <div class="signature__visual" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<section class="atelier">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="ornament">◆ ◆ ◆</div>
+      <p class="eyebrow">Atmosfer</p>
+      <h2>Sakin, temiz, <em>size ait</em> bir an.</h2>
+      <p>Salonumuzdan kareler. Tek kullanımlık ürünler, hijyenik ekipman, yumuşak ışık — kendinizi bırakmak için sade bir alan.</p>
+    </div>
+    <div class="atelier__grid">
+      <div class="atelier__tile"><span>Bakım Odası</span></div>
+      <div class="atelier__tile"><span>Lazer Köşesi</span></div>
+      <div class="atelier__tile"><span>Resepsiyon</span></div>
+      <div class="atelier__tile"><span>Tırnak Atölyesi</span></div>
+      <div class="atelier__tile"><span>Ürün Reyonu</span></div>
+    </div>
+    <p style="text-align:center; margin-top: 32px; font-size:.88rem; color: var(--ink-soft);">
+      Tüm fotoğraflar için <a href="https://www.instagram.com/yadeeguzellik/" target="_blank" rel="noopener" style="color: var(--rose); text-decoration: none; border-bottom: 1px dashed var(--rose);">@yadeeguzellik</a> Instagram hesabımızı ziyaret edebilirsiniz.
+    </p>
+  </div>
+</section>
+
+<section id="yorumlar" class="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="ornament">◆ ◆ ◆</div>
+      <p class="eyebrow">Google Yorumları</p>
+      <h2>5.0 yıldız, <em>12 yorum</em> — ve devam ediyor.</h2>
+      <p>Müşterilerimizin kendi kelimeleri. Tek bir yorumumuz dahi 5 yıldızın altında değil — ve bu bizim için en kıymetli emek.</p>
+    </div>
+
+    <div class="reviews__grid">
+      <article class="review">
+        <div class="review__stars">★ ★ ★ ★ ★</div>
+        <p>"3 ay öncesinde yosun peeling yaptırdım — cilt bakımı, lazer ve tırnak işlemleri için de sürekli gittiğimiz tek adres Yade Güzellik. Yaren Hanım işinde profesyonel."</p>
+        <div class="review__author">Yaren Yılmaz</div>
+        <div class="review__date">3 ay önce · Google</div>
+      </article>
+
+      <article class="review">
+        <div class="review__stars">★ ★ ★ ★ ★</div>
+        <p>"Gerçekten çok memnun kaldığım bir işletme. G5 yaptırıyorum, lazer ve cilt bakımı da yaptırıyorum. Yaren Hanım bana o güveni fazlasıyla verdi, her şeyi detaylı şekilde anlattı."</p>
+        <div class="review__author">Beyza Ortak</div>
+        <div class="review__date">3 ay önce · Google</div>
+      </article>
+
+      <article class="review">
+        <div class="review__stars">★ ★ ★ ★ ★</div>
+        <p>"Kaliteli ve güler yüzlü hizmet anlayışının itinayla devam ettiği yegane yerlerden biri. Yaren Hanım her işlemi en ince ayrıntısına kadar üşenmeden anlatan muhteşem bir detay."</p>
+        <div class="review__author">Seda Çakır</div>
+        <div class="review__date">3 ay önce · Google</div>
+      </article>
+    </div>
+    <p style="text-align:center; margin-top: 40px;">
+      <a href="https://www.google.com/maps/search/?api=1&query=Yade+G%C3%BCzellik+Bodrum" target="_blank" rel="noopener" class="btn btn-ghost" style="color: var(--plum); border-color: var(--plum);">Tüm yorumları Google'da gör</a>
+    </p>
+  </div>
+</section>
+
+<section id="iletisim" class="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="ornament">◆ ◆ ◆</div>
+      <p class="eyebrow">İletişim &amp; Konum</p>
+      <h2>Buluşalım, <em>yakında</em>.</h2>
+      <p>Bodrum'da merkezi konumda, ulaşımı kolay. Randevu için telefonla aramanız yeterli; WhatsApp da yanıtlıyoruz.</p>
+    </div>
+
+    <div class="contact__grid">
+      <div class="contact__col">
+        <h3>Bize <em>ulaşın</em></h3>
+        <div class="contact__row">
+          <div class="contact__label">Adres</div>
+          <div class="contact__value">Adliye Cd. Adalet İş Merkezi No:17/C8 · 48400 Bodrum / Muğla</div>
+        </div>
+        <div class="contact__row">
+          <div class="contact__label">Telefon &amp; WhatsApp</div>
+          <div class="contact__value"><a href="tel:+905442324048">0544 232 40 48</a></div>
+        </div>
+        <div class="contact__row">
+          <div class="contact__label">Çalışma Saatleri</div>
+          <div class="contact__value">Pazartesi – Cumartesi · 10:00 – 18:30</div>
+        </div>
+        <div class="contact__row">
+          <div class="contact__label">Instagram</div>
+          <div class="contact__value"><a href="https://www.instagram.com/yadeeguzellik/" target="_blank" rel="noopener">@yadeeguzellik</a></div>
+        </div>
+        <div class="contact__cta-row">
+          <a href="tel:+905442324048" class="btn btn-primary">Hemen ara</a>
+          <a href="https://wa.me/905442324048" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp'tan yaz</a>
+        </div>
+      </div>
+
+      <div class="contact__map">
+        <iframe
+          title="Yade Güzellik Konum"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Yade%20G%C3%BCzellik%20Bodrum&output=embed">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div>© <span id="yyyy"></span> Yade Güzellik · Bodrum</div>
+    <div>Tasarım <a href="https://www.instagram.com/yadeeguzellik/" target="_blank" rel="noopener">@yadeeguzellik</a> için hazırlanmıştır.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yyyy').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
