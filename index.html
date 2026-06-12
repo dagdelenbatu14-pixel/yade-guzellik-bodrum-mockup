@@ -140,26 +140,22 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
 .signature__quote { font-family: var(--f-display); font-style: italic; font-size: 1.4rem; line-height: 1.4; color: var(--plum); border-left: 2px solid var(--rose); padding: 8px 0 8px 24px; margin: 32px 0 0; }
 .signature__quote cite { display: block; margin-top: 14px; font-family: var(--f-body); font-style: normal; font-size: .74rem; letter-spacing: .26em; text-transform: uppercase; color: var(--rose); }
 .signature__visual { position: relative; aspect-ratio: 4/5; background: linear-gradient(135deg, var(--rose) 0%, var(--plum) 100%); border-radius: 4px; overflow: hidden; }
-.signature__visual::before { content: ''; position: absolute; inset: 0; background:
-  radial-gradient(circle at 30% 30%, rgba(255,255,255,.18), transparent 60%),
-  repeating-linear-gradient(45deg, transparent 0 12px, rgba(255,255,255,.04) 12px 13px);
-}
-.signature__visual::after { content: 'YADE'; position: absolute; bottom: 32px; left: 32px; font-family: var(--f-display); font-style: italic; color: rgba(255,255,255,.85); font-size: 4.5rem; line-height: 1; letter-spacing: -.02em; }
+.signature__visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.signature__visual::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, transparent 50%, rgba(26,43,29,.55) 100%); }
+.signature__visual::after { content: 'YADE'; position: absolute; z-index: 2; bottom: 28px; left: 30px; font-family: var(--f-display); font-style: italic; color: rgba(255,255,255,.92); font-size: 3.4rem; line-height: 1; letter-spacing: -.02em; text-shadow: 0 2px 14px rgba(0,0,0,.35); }
 @media (max-width: 860px) { .signature__grid { grid-template-columns: 1fr; gap: 40px; } }
 
 /* gallery / atmosphere */
 .atelier { background: var(--ivory); }
-.atelier__grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 240px 240px; gap: 12px; }
-.atelier__tile { background: linear-gradient(135deg, var(--blush), var(--rose-deep)); border-radius: 2px; position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 18px; color: #fff; font-family: var(--f-display); font-style: italic; font-size: 1.1rem; }
-.atelier__tile::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(255,255,255,.18), transparent 60%); }
-.atelier__tile:nth-child(1) { grid-row: span 2; background: linear-gradient(160deg, var(--plum) 0%, var(--rose) 100%); }
-.atelier__tile:nth-child(2) { background: linear-gradient(135deg, var(--gold-soft), var(--gold)); }
-.atelier__tile:nth-child(3) { background: linear-gradient(135deg, #b8cbb0, var(--rose)); }
-.atelier__tile:nth-child(4) { background: linear-gradient(135deg, #d4dec8, var(--gold-soft)); }
-.atelier__tile:nth-child(5) { background: linear-gradient(135deg, #d8e3d2, var(--rose-deep)); }
-.atelier__tile span { position: relative; z-index: 2; }
-@media (max-width: 860px) { .atelier__grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 180px); }
-  .atelier__tile:nth-child(1) { grid-row: span 1; grid-column: span 2; } }
+.atelier__grid { display: grid; grid-template-columns: 1.45fr 1fr; grid-template-rows: 268px 268px; gap: 12px; }
+.atelier__tile { background: var(--blush); border-radius: 2px; position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 20px; color: #fff; font-family: var(--f-display); font-style: italic; font-size: 1.2rem; }
+.atelier__tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.atelier__tile:hover img { transform: scale(1.05); }
+.atelier__tile::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, transparent 42%, rgba(26,43,29,.62) 100%); }
+.atelier__tile:nth-child(1) { grid-row: span 2; }
+.atelier__tile span { position: relative; z-index: 2; text-shadow: 0 2px 12px rgba(0,0,0,.4); }
+@media (max-width: 860px) { .atelier__grid { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 220px; }
+  .atelier__tile:nth-child(1) { grid-row: span 2; } }
 
 /* reviews */
 .reviews { background: var(--paper); }
@@ -227,7 +223,7 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
 <header class="hero">
   <div class="wrap">
     <div class="hero__ornament">YADE</div>
-    <p class="hero__eyebrow">Bodrum · Güzellik Atölyesi</p>
+    <p class="hero__eyebrow">Bodrum · Güzellik Merkezi</p>
     <h1>Cildinize, tırnağınıza ve <em>kendinize</em> ayırdığınız o özel saat.</h1>
     <p class="hero__sub">Cilt bakımından lazer epilasyona, yosun peelingden tırnak işlemlerine — Yaren'in titiz dokunuşuyla, her detayı size anlatarak.</p>
     <div class="cta-row">
@@ -256,10 +252,10 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
       <article class="service">
         <div class="service__num">— 01</div>
         <h3>Cilt Bakımı</h3>
-        <p>Cildin ihtiyacına göre kişiselleştirilmiş bakım protokolleri; temizleme, peeling, maske ve yatıştırma.</p>
+        <p>Cildin ihtiyacına göre kişiselleştirilmiş bakım protokolleri; temizleme, maske ve yatıştırma.</p>
         <ul>
           <li>Klasik cilt bakımı<span>60 dk</span></li>
-          <li>Yosun peeling<span>İmza ritüeli</span></li>
+          <li>Derin temizlik<span>Arındırıcı</span></li>
           <li>Yatıştırıcı bakım<span>Hassas cilt</span></li>
           <li>Anti-aging seans<span>Yenileyici</span></li>
         </ul>
@@ -267,6 +263,17 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
 
       <article class="service">
         <div class="service__num">— 02</div>
+        <h3>Yosun Peeling</h3>
+        <p>Décaar algae peeling ile cildi derinden canlandıran, yenileyen imza ritüelimiz.</p>
+        <ul>
+          <li>Yosun peeling seansı<span>İmza ritüeli</span></li>
+          <li>Cilt yenileme<span>Canlandırıcı</span></li>
+          <li>Leke &amp; ton bakımı<span>Eşitleyici</span></li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <div class="service__num">— 03</div>
         <h3>Lazer Epilasyon</h3>
         <p>Cildi yormayan, etkili teknolojiyle tüm vücut bölgeleri için güvenli lazer uygulaması.</p>
         <ul>
@@ -278,8 +285,8 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
       </article>
 
       <article class="service">
-        <div class="service__num">— 03</div>
-        <h3>G5 & Vücut</h3>
+        <div class="service__num">— 04</div>
+        <h3>G5 &amp; Vücut</h3>
         <p>Selülit, sıkılaştırma ve bölgesel incelmeye yönelik G5 masaj ve vücut bakımları.</p>
         <ul>
           <li>G5 selülit masajı<span>30 dk</span></li>
@@ -289,11 +296,10 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
       </article>
 
       <article class="service">
-        <div class="service__num">— 04</div>
-        <h3>Tırnak Sanatı</h3>
-        <p>Klasik manikürden kalıcı oje ve protez tırnağa — uzun ömürlü, temiz işçilik.</p>
+        <div class="service__num">— 05</div>
+        <h3>Tırnak</h3>
+        <p>Kalıcı oje, protez tırnak ve nail art — uzun ömürlü, temiz ve özenli işçilik.</p>
         <ul>
-          <li>Manikür &amp; Pedikür<span>Klasik</span></li>
           <li>Kalıcı oje<span>3-4 hafta</span></li>
           <li>Protez tırnak<span>Form &amp; Renk</span></li>
           <li>Nail art<span>İsteğe özel</span></li>
@@ -301,26 +307,16 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
       </article>
 
       <article class="service">
-        <div class="service__num">— 05</div>
-        <h3>Kaş &amp; Kirpik</h3>
-        <p>Doğal hatlara saygılı şekillendirme, boyama ve uzun süreli kalıcı uygulamalar.</p>
+        <div class="service__num">— 06</div>
+        <h3>Kaş Tasarımı</h3>
+        <p>Yüz hatlarına uygun, doğal duruşlu kaş şekillendirme ve düzenli bakım.</p>
         <ul>
-          <li>Kaş tasarımı<span>İpek ipi</span></li>
-          <li>Kaş &amp; kirpik boyama<span>Doğal ton</span></li>
-          <li>Kirpik lifting<span>6 hafta</span></li>
+          <li>İpek ipi ile alma<span>Hassas</span></li>
+          <li>Kaş şekillendirme<span>Yüze özel</span></li>
+          <li>Düzenli bakım<span>Periyodik</span></li>
         </ul>
       </article>
 
-      <article class="service">
-        <div class="service__num">— 06</div>
-        <h3>Özel Günler</h3>
-        <p>Gelin, nişan ve davet öncesi — cildinizi ve görünümünüzü o güne hazırlayan tam paket.</p>
-        <ul>
-          <li>Gelin bakım paketi<span>Çok seanslı</span></li>
-          <li>Davet hazırlığı<span>Aynı gün</span></li>
-          <li>Özel danışma<span>Ücretsiz</span></li>
-        </ul>
-      </article>
     </div>
   </div>
 </section>
@@ -331,14 +327,16 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
       <div class="signature__text">
         <p class="eyebrow">Hakkımızda</p>
         <h2>Bodrum'da, <em>kadın elinin</em> dokunduğu sakin bir köşe.</h2>
-        <p>Yade Güzellik, Bodrum'da Yaren'in kurduğu küçük ama özenle düşünülmüş bir güzellik atölyesi. Her misafire ayrılan zaman, her uygulamanın anlatıldığı detay, ve "buraya geldiğime değdi" dedirten bir samimiyet.</p>
-        <p>İşletme sahibi kadın. Müşterilerimizin çoğu da kadın — birbirimizi anlıyoruz, güvenle bırakıyoruz. Geliyoruz, dinleniyoruz, daha iyi hissederek çıkıyoruz.</p>
+        <p>Yade Güzellik, Bodrum'da Yaren'in kurduğu küçük ama özenle düşünülmüş bir güzellik merkezi. Her misafire ayrılan zaman, her uygulamanın anlatıldığı detay, ve "buraya geldiğime değdi" dedirten bir samimiyet.</p>
+        <p>İşletme sahibi kadın. Geliyor, dinleniyor, daha iyi hissederek çıkıyorsunuz — her detayı size anlatarak, güvenle.</p>
         <blockquote class="signature__quote">
           "Sahip olduğunuz her şey önemlidir; cildiniz, tırnağınız ve bize ayırdığınız zaman özellikle."
           <cite>— Yaren</cite>
         </blockquote>
       </div>
-      <div class="signature__visual" aria-hidden="true"></div>
+      <div class="signature__visual">
+        <img src="images/salon-genel.jpg" alt="Yade Güzellik salon genel görünüm — Bodrum" loading="lazy"/>
+      </div>
     </div>
   </div>
 </section>
@@ -352,11 +350,9 @@ section { padding: clamp(80px, 14vw, 160px) 0; }
       <p>Salonumuzdan kareler. Tek kullanımlık ürünler, hijyenik ekipman, yumuşak ışık — kendinizi bırakmak için sade bir alan.</p>
     </div>
     <div class="atelier__grid">
-      <div class="atelier__tile"><span>Bakım Odası</span></div>
-      <div class="atelier__tile"><span>Lazer Köşesi</span></div>
-      <div class="atelier__tile"><span>Resepsiyon</span></div>
-      <div class="atelier__tile"><span>Tırnak Atölyesi</span></div>
-      <div class="atelier__tile"><span>Ürün Reyonu</span></div>
+      <div class="atelier__tile"><img src="images/bakim-odasi.jpg" alt="Yade Güzellik bakım ve cilt odası" loading="lazy"/><span>Bakım &amp; Cilt Odası</span></div>
+      <div class="atelier__tile"><img src="images/lazer-odasi.jpg" alt="Yade Güzellik lazer epilasyon odası" loading="lazy"/><span>Lazer Odası</span></div>
+      <div class="atelier__tile"><img src="images/tirnak-atolyesi.jpg" alt="Yade Güzellik tırnak odası" loading="lazy"/><span>Tırnak Odası</span></div>
     </div>
     <p style="text-align:center; margin-top: 32px; font-size:.88rem; color: var(--ink-soft);">
       Tüm fotoğraflar için <a href="https://www.instagram.com/yadeeguzellik/" target="_blank" rel="noopener" style="color: var(--rose); text-decoration: none; border-bottom: 1px dashed var(--rose);">@yadeeguzellik</a> Instagram hesabımızı ziyaret edebilirsiniz.
