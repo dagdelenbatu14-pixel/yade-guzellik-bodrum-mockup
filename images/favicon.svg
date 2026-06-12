@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Yade">
+  <!-- yaprak aksanı (altın) -->
+  <path d="M44 13 C50 15 52 21 49 27 C44 25 42 19 44 13 Z" fill="#b8924d"/>
+  <path d="M46.5 14.5 C47 19 46 23 49 27" fill="none" stroke="#8f6f38" stroke-width="1.1" stroke-linecap="round"/>
+  <!-- Y monogram, zarif serif -->
+  <text x="31" y="46" text-anchor="middle"
+        font-family="Georgia, 'Cormorant Garamond', 'Times New Roman', serif"
+        font-style="italic" font-weight="600" font-size="48"
+        fill="#2c4730">Y</text>
+</svg>
